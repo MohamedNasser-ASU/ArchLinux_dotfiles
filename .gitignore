@@ -1,0 +1,49 @@
+# Secrets
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.env
+.env
+.env.*
+id_rsa
+id_ed25519
+*.kdbx
+
+# SSH / GPG / tokens
+.ssh/
+.gnupg/
+.aws/
+.config/gh/
+.config/github-copilot/
+
+# Browser/app private data
+.mozilla/
+.config/google-chrome/
+.config/BraveSoftware/
+.config/discord/
+
+# Caches and local data
+.cache/
+.local/share/
+.local/state/
+npm/
+node_modules/
+
+# Logs
+*.log
+
+# Backups
+*.bak
+*.old
+*.swp
+*~
+
+# Large personal folders
+Downloads/
+Documents/
+Pictures/
+Videos/
+Music/
+Desktop/
