@@ -1,0 +1,14 @@
+#!/bin/sh
+
+choice=$(printf "Copy\nSave" | dmenu -i -p "Screenshot:")
+
+case "$choice" in
+    Copy)
+        maim -s | xclip -selection clipboard -t image/png
+        ;;
+    Save)
+        dir="$HOME/Pictures/Screenshots"
+        mkdir -p "$dir"
+        maim -s "$dir/$(date '+%Y-%m-%d_%H-%M-%S').png"
+        ;;
+esac
