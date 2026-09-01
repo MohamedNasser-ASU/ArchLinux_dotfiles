@@ -1,0 +1,10 @@
+#!/bin/bash
+
+case "$1" in
+    warm)
+        gammastep -O 3500
+        ;;
+    normal)
+        gammastep -x
+        ;;
+esac
