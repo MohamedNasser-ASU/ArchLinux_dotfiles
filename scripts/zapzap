@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export QTWEBENGINE_CHROMIUM_FLAGS="--disable-gpu --disable-gpu-compositing"
+exec /usr/bin/zapzap "$@"
