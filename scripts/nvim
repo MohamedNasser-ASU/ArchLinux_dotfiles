@@ -1,0 +1,15 @@
+#!/bin/sh
+
+restore_spacing() {
+    kitten @ set-spacing --match "id:$KITTY_WINDOW_ID" \
+        padding=default margin=default
+}
+
+if [ -n "$KITTY_WINDOW_ID" ]; then
+    kitten @ set-spacing --match "id:$KITTY_WINDOW_ID" \
+        padding=0 margin=0
+
+    trap restore_spacing EXIT
+fi
+
+/usr/bin/nvim "$@"
